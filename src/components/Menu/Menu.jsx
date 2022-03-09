@@ -39,7 +39,7 @@ const Bar = styled.div`
     cursor: pointer;
 `
 const Line = styled.div`
-    width: 23px;
+    width: 20px;
     height: 3.5px;
     background-color: ${props => props.bar ? "transparent" : "#8c8c8e"};
     border-radius: 50px;
@@ -47,7 +47,7 @@ const Line = styled.div`
     :before,:after{
         content: '';
         position: absolute;
-        width: 23px;
+        width: 20px;
         height: 3px;            
         background-color: #8c8c8e;
         border-radius: 50px;
@@ -64,12 +64,13 @@ const MenuBar = styled.div`
     padding: 4rem 2rem;
     div{
         h4{
-        font-weight: 300;
+        font-weight: 400;
         font-size: 0.8rem;
         margin : 0.5rem 0;
         color: #8c8c8e;
         cursor: pointer;
-        transition: all 200ms ease-in-out;
+        text-transform: uppercase;
+        transition: all 100ms ease-in-out;
         :hover{
             color: #e9e9e9;
             font-weight: 400;

@@ -3,6 +3,7 @@ import './App.css';
 import MainPage from './pages/MainPage';
 import styled from 'styled-components';
 
+
 function App() {
   const darkTheme = createTheme({
     palette: {
@@ -10,7 +11,7 @@ function App() {
     },
   });
   return (
-    <ThemeProvider darkTheme={darkTheme}>
+    <ThemeProvider Theme={darkTheme}>
       <Container>
         <MainPage/>
       </Container>

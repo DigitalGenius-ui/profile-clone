@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import Feed from '../components/feed/Feed';
 import Menu from '../components/Menu/Menu';
 import Profile from '../components/profile/Profile';
 import Skills from '../components/profile/Skills';
@@ -15,41 +16,7 @@ const MainPage = () => {
             </Skill>
         </ProfileBar>
         <FeedBar>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
-            <h2>feed</h2>
+            <Feed />
         </FeedBar>
         <MenuBar bar={bar}>
             <Menu bar={bar} setBar={setBar}/>

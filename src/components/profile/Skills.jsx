@@ -11,8 +11,8 @@ const Skills = () => {
   return (
       <Container>
           <Details>
-              {details.map((item) => (
-                <Detail>
+              {details.map((item, i) => (
+                <Detail key={i}>
                   <h1>{item.title} :</h1>
                   <h2>{item.response}</h2>
                 </Detail>
@@ -33,8 +33,8 @@ const Skills = () => {
             </Skill>
           </Language>
           <Codes>
-              {skills.map((item) => (
-                <Code>
+              {skills.map((item, i) => (
+                <Code key={i}>
                     <TiTick 
                     style={{fontSize : "1rem", 
                     fontWeight : "bolder",
@@ -45,8 +45,8 @@ const Skills = () => {
               ))}
           </Codes>
           <Deploy>
-              {deploy.map((item) => (
-                  <Item>
+              {deploy.map((item, i) => (
+                  <Item key={i}>
                       <TiTick 
                         style={{fontSize : "1rem", 
                         fontWeight : "bolder",

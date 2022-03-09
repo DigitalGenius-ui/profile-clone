@@ -37,13 +37,11 @@ export default function CircularStatic(props) {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      setProgress((prevProgress) => (prevProgress < 100 && prevProgress + props.percent));
+    setTimeout(() => {
+      setProgress((prevProgress) => prevProgress + props.percent);
     }, 1000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [props]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return <Progress value={progress} />;
 }
