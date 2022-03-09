@@ -21,7 +21,7 @@ const Logos = () => {
     <Contents>
         <Slider {...settings} style={{marginTop: "4rem"}}>
             <><RiHtml5Line className='icons' style={{color : "#da4722a9"}}/></>
-            <><FaCss3Alt className='icons' style={{color : "#1dcde490"}}/></>
+            <><FaCss3Alt className='icons' style={{color : "#164fee90"}}/></>
             <><IoLogoJavascript className='icons' style={{color : "#e7e30086"}}/></>
             <><FaReact className='icons' style={{color : "#1dcde490"}}/></>
             <><GrNode className='icons' style={{color : "#14d6026f"}}/></>
