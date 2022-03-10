@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Menu = ({bar, setBar}) => {
@@ -10,11 +11,13 @@ const Menu = ({bar, setBar}) => {
             </Bar>
         </Bars>
         <MenuBar bar={bar}>
-            <div><h4>Home</h4></div>
-            <div><h4>Service</h4></div>
-            <div><h4>Pricing</h4></div>
-            <div><h4>Testimonial</h4></div>
-            <div><h4>Portfolio</h4></div>
+            <div>
+                <Link to="/"><h4>Home</h4></Link>
+            </div>
+            <div>
+                <Link to="profile"><h4>Portfolio</h4></Link>
+            </div>
+            <div><h4>Contact</h4></div>
         </MenuBar>
     </Container>
   )
@@ -22,7 +25,11 @@ const Menu = ({bar, setBar}) => {
 
 export default Menu;
 
-const Container = styled.div``
+const Container = styled.div`
+    a{
+        text-decoration: none;
+    }
+`
 const Bars = styled.div`
     width: ${props => props.bar ? "15rem" : "5rem"};
     transition: all 500ms ease-in-out;

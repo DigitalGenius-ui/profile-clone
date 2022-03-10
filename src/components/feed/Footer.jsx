@@ -15,6 +15,7 @@ const Container = styled.div`
     background: linear-gradient(159deg, 
     #2d2d3a 0%, #2b2b35 100%);
     padding: 1rem ;
+    margin: 0 2rem;
     text-align: center;
     font-size: 0.7rem;
     margin-top: 2rem;

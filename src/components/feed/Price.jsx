@@ -12,7 +12,7 @@ const Price = () => {
             <Cart>
                 <Head>
                     <h1>basic</h1>
-                    <h2><span>$</span> 30</h2>
+                    <h2><span>$</span>50</h2>
                 </Head>
                 <Body>
                     <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
@@ -29,7 +29,7 @@ const Price = () => {
             <Cart>
                 <Head>
                     <h1>Standard</h1>
-                    <h2><span>$</span> 50</h2>
+                    <h2><span>$</span>75</h2>
                 </Head>
                 <Body>
                     <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
@@ -46,7 +46,7 @@ const Price = () => {
             <Cart>
                 <Head>
                     <h1>Premium</h1>
-                    <h2><span>$</span> 75</h2>
+                    <h2><span>$</span>100</h2>
                 </Head>
                 <Body>
                 <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>

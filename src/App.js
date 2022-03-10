@@ -1,8 +1,9 @@
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
-import MainPage from './pages/MainPage';
 import styled from 'styled-components';
-
+import MainPage from './pages/MainPage';
+import { useEffect, useState } from 'react';
+import Loading from './components/progress/Loading';
 
 function App() {
   const darkTheme = createTheme({
@@ -10,10 +11,21 @@ function App() {
       type: 'dark',
     },
   });
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setInterval(() => {
+      setLoading(false)
+      setOpen(true);
+    }, 4000);
+  },[]);
   return (
     <ThemeProvider Theme={darkTheme}>
       <Container>
-        <MainPage/>
+        {open && <MainPage/>}
+        {loading && <Loading/>}
       </Container>
     </ThemeProvider>
   );

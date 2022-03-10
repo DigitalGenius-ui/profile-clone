@@ -1,16 +1,19 @@
 import React from 'react'
 import styled from 'styled-components';
+import Animation from '../animation/Animation';
 
 const About = () => {
   return (
-    <Container>
-        <h2>About me</h2>
-        <p>From the moment I produced <span>"Hello World"</span> in the console of my application, I knew I was hooked into the 
-        world of Web Development. But Web Development has never been <span>"just a job"</span> for me, its offer an engaging
-        challenge to continually learn and improve my skills in creating high-quality Webpages.<br></br> What started with a
-        simple <span>"Hello World"</span> has become a full-fledge passion that only gets more exciting as the year go by. 
-        </p>
-    </Container>
+    <Animation transition={1} delay={0.5}>
+        <Container>
+            <h2>About me</h2>
+            <p>From the moment I produced <span>"Hello World"</span> in the console of my application, I knew I was hooked into the 
+            world of Web Development. But Web Development has never been <span>"just a job"</span> for me, its offer an engaging
+            challenge to continually learn and improve my skills in creating high-quality Webpages.<br></br> What started with a
+            simple <span>"Hello World"</span> has become a full-fledge passion that only gets more exciting as the year go by. 
+            </p>
+        </Container>
+    </Animation>
   )
 }
 

@@ -2,21 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { service } from '../../Data/Data';
 import {IoIosArrowForward} from 'react-icons/io';
+import Animation from '../animation/Animation';
 
 const Services = () => {
   return (
-    <Container>
-        <h2>My Services</h2>
-        <Service>
-            {service.map((item,i) => (
-                <Box key={i}>
-                    <h1>{item.title}</h1>
-                    <p>{item.body}</p>
-                    <div>order now <IoIosArrowForward className='icon'/></div>
-                </Box>
-            ))}
-        </Service>
-    </Container>
+      <Container>
+        <Animation transition={1.3} delay={0.5}>
+            <h2>My Services</h2>
+            <Service>
+                {service.map((item,i) => (
+                        <Box key={i}>
+                            <h1>{item.title}</h1>
+                            <p>{item.body}</p>
+                            <div>order now <IoIosArrowForward className='icon'/></div>
+                        </Box>
+                ))}
+            </Service>
+        </Animation>
+        </Container>
   )
 }
 

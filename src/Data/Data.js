@@ -36,3 +36,54 @@ export const service = [
         body : "As a developer, I can change all kinds of UX/UI design files like PSD, Figma, Adobe XD into actual web pages."
     },
 ]
+
+export const projects = [
+    {
+      id:1,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959292/manage_e75lqk.png',
+      category:'basic',
+      disc : "This static landing page is build using HTML5, CSS3, AOS animation and Vanilla Javascript.",
+      text:'Manage Landing Page ',
+      html_link:'https://digitalgenius-ui.github.io/manage-landing-page/',
+    },
+    {
+      id:2,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959295/bloger_lvb89w.png',
+      category:'basic',
+      text:'Bloger Landing Page',
+      html_link:'https://digitalgenius-ui.github.io/bloger/',
+      disc : "This static website is build using HTML5, CSS3, JS as well as some jquery plugins and JS libraries.",
+    },
+    {
+      id:3,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959296/onta_th5ipe.png',
+      category:'basic',
+      text:'law Landing Page',
+      html_link:'https://digitalgenius-ui.github.io/law-client/',
+      disc : "This dynamic landing page is build using REACT JS components, Styled-Components and React-Reaveal animation.",
+    },
+    {
+      id:4,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959295/shop_jjhdxi.png',
+      category:'complex',
+      text:'Online Shop',
+      html_link:'https://milad-online-shop.netlify.app/',
+      disc : "This dynamic E-commerce app is build using REACT JS components, Styled-Components, Material-ui and Context Api.",
+    },
+    {
+      id:5,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959294/linkedin_ccu16j.png',
+      category:'complex',
+      text:'Linkedin Clone',
+      html_link:'https://milad-linkedin-clone.netlify.app/',
+      disc : "This dynamic Linkedin app is build using REACT JS components, Styled-Components, Material-ui, firebase, and Context Api.",
+    },
+    {
+      id:6,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959294/cororna_mvhwcb.png',
+      category:'complex',
+      text:'Corona Virus Tracker',
+      html_link:'https://milad-corona-tracker.netlify.app/',
+      disc : "This Corona Virus Tracker is build using REACT JS components, Material-ui, Restful Api",
+    }
+  ]

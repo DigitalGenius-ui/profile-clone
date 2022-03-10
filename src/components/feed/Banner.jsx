@@ -1,29 +1,32 @@
 import React from 'react'
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect'
+import Animation from '../animation/Animation';
 
 const Feed = () => {
   return (
     <Container>
-        <Banner>
-          <Texts>
-            <h1>Discover my Amazing <br></br> Art Space!</h1>
-            <p style={{display : "flex", alignItems : "center", fontSize : "1rem", gap : "0.2rem"}}> 
-              &lt;<span>code</span>&gt; I built
-              <Typewriter
-                options={{
-                strings: ["Interactive Web Pages", "Responsive Web Pages"],
-                autoStart: true,
-                loop: true,
-                changeDeleteSpeed : 10
-                }}
-              />
-              &lt;<span>code</span>&gt;
-            </p>
-            <button>explore now</button>
-          </Texts>
-          <Image src="https://res.cloudinary.com/ghazni/image/upload/v1646637435/milad_z34z7s.png"/>
-        </Banner>
+        <Animation transition ={0.5} delay= {0.5}>
+          <Banner>
+            <Texts>
+              <h1>Discover my Amazing <br></br> Art Space!</h1>
+              <div style={{display : "flex", alignItems : "center", fontSize : "1rem", gap : "0.2rem"}}> 
+                &lt;<span className='code'>code</span>&gt; I built
+                <Typewriter
+                  options={{
+                  strings: ["Interactive Web Pages", "Responsive Web Pages"],
+                  autoStart: true,
+                  loop: true,
+                  changeDeleteSpeed : 10
+                  }}
+                />
+                &lt;<span className='code'>code</span>&gt;
+              </div>
+              <button>explore now</button>
+            </Texts>
+            <Image src="https://res.cloudinary.com/ghazni/image/upload/v1646637435/milad_z34z7s.png"/>
+          </Banner>
+        </Animation>
     </Container>
   )
 }
@@ -50,9 +53,9 @@ const Texts = styled.div`
     letter-spacing: 0.1rem;
     font-weight: 500;
   }
-  p{
+  div{
     padding: 1rem 0;
-    span{
+    .code{
       color: skyblue;
       font-weight: 500;
     }
