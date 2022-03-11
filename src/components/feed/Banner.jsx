@@ -24,7 +24,7 @@ const Feed = () => {
               </div>
               <button>explore now</button>
             </Texts>
-            <Image src="https://res.cloudinary.com/ghazni/image/upload/v1646637435/milad_z34z7s.png"/>
+            <Image style={{opacity : "0.8"}} src="https://res.cloudinary.com/ghazni/image/upload/v1646637435/milad_z34z7s.png"/>
           </Banner>
         </Animation>
     </Container>
@@ -37,7 +37,7 @@ const Container = styled.div`
   position: relative;
 `
 const Banner = styled.div`
-  background: linear-gradient(#3a3232d1, #4b4545a7), url("https://res.cloudinary.com/ghazni/image/upload/v1646637427/ban_ajuzqa.jpg");
+  background : linear-gradient(159deg, rgba(37, 37, 50, 0.596) 0%, rgba(35, 35, 45, 0.98) 100%), url("https://res.cloudinary.com/ghazni/image/upload/v1646637427/ban_ajuzqa.jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
