@@ -14,16 +14,25 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const MainPage = () => {
     const [bar, setBar] = useState(false);
     const [prof, setProf] = useState(false);
+
+    const profileMove = () => {
+      setProf(!prof);
+      setBar(false)
+    }
+    const barMove = () => {
+      setBar(!bar)
+      setProf(!false);
+    }
   return (
     <BrowserRouter >
           <MenuBg>
             <Dots prof={prof}>
               <MoreVertIcon 
-              onClick={() => setProf(!prof)}
+              onClick={profileMove}
               style={{background : "linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%)"}}/>
             </Dots>
             <Bars bar={bar}>
-              <Bar onClick={() => setBar(!bar)}>
+              <Bar onClick={barMove}>
                 <Line bar={bar}></Line>
               </Bar>
             </Bars>
