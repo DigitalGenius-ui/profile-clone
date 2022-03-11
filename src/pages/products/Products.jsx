@@ -7,7 +7,7 @@ const Products = ({item}) => {
     <motion.div layout>
       <Image src={item.image} />
         <Texts>
-          <a href={item.html_link}><h1>{item.text}</h1></a>
+          <a href={item.html_link} target="_blank" rel="noreferrer"><h1>{item.text}</h1></a>
           <p>{item.disc}</p>
       </Texts>
     </motion.div>
@@ -20,6 +20,7 @@ const Image = styled.img`
   width: 100%;
   height: 10rem;
   object-fit: cover;
+  opacity: 0.7;
 `
 const Texts = styled.div`
   h1{

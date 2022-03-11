@@ -7,15 +7,29 @@ import Logos from '../components/feed/Logos';
 import Menu from '../components/Menu/Menu';
 import Profile from '../components/profile/Profile';
 import Skills from '../components/profile/Skills';
-import Portfolio from './Portfolio';
+import Contact from './contact/Contact';
+import Portfolio from './products/Portfolio';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const MainPage = () => {
     const [bar, setBar] = useState(false);
+    const [prof, setProf] = useState(false);
   return (
-    <Container>
-        <BrowserRouter >
+    <BrowserRouter >
+          <MenuBg>
+            <Dots prof={prof}>
+              <MoreVertIcon 
+              onClick={() => setProf(!prof)}
+              style={{background : "linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%)"}}/>
+            </Dots>
+            <Bars bar={bar}>
+              <Bar>
+                <Line bar={bar} onClick={() => setBar(!bar)}></Line>
+              </Bar>
+            </Bars>
+          </MenuBg>
           <Container>
-            <ProfileBar>
+            <ProfileBar prof={prof}>
               <Profile/>
               <Skill>
                   <Skills/>
@@ -26,16 +40,16 @@ const MainPage = () => {
                   <Routes>
                       <Route path='/' element={<Feed/>}/>
                       <Route path="/profile" element={<Portfolio/>}/>
+                      <Route path="/contact" element={<Contact/>}/>
                   </Routes>
                 <Logos/>
                 <Footer/>
               </FeedBar>
               <MenuBar bar={bar}>
-                  <Menu bar={bar} setBar={setBar}/>
+                <Menu bar={bar} setBar={setBar}/>
             </MenuBar>
           </Container>
       </BrowserRouter>
-    </Container>
   )
 }
 
@@ -44,6 +58,7 @@ export default MainPage;
 const Container = styled.div`
     display: flex;
     overflow: hidden;
+    position: relative;
 `
 const ProfileBar = styled.div`
     position: fixed;
@@ -52,6 +67,11 @@ const ProfileBar = styled.div`
     top: 1rem;
     background-color: #20202a;
     overflow: hidden;
+    @media(max-width : 970px){
+      transform: ${props => props.prof ? "translateX(-1rem)" : "translateX(-20rem)"};
+      transition: all 500ms ease-in-out;
+      margin-top: 3rem;
+    }
 `
 const Skill = styled.div`
     position: absolute;
@@ -71,6 +91,13 @@ const FeedBar = styled.div`
     right: 6rem;
     left: 20rem;
     bottom: 1rem;
+    z-index: -1;
+    transition: all 500ms ease-in-out;
+    @media(max-width : 970px){
+      right: 0;
+      left: 0;
+      top : 4rem;
+    }
     ::-webkit-scrollbar{
         display: none;
     }
@@ -86,6 +113,11 @@ const BgImg = styled.div`
   left : 20rem;
   right : 6rem;
   z-index: -1;
+  @media(max-width : 970px){
+    right: 0;
+    left: 0;
+    top : 0;
+  }
 `
 const MenuBar = styled.div`
     width: ${props => props.bar ? "15rem" : "5rem"};
@@ -95,4 +127,73 @@ const MenuBar = styled.div`
     top: 1rem;
     background-color: #20202a;
     transition: all 500ms ease-in-out;
+    @media(max-width : 970px){
+      right: ${props => props.bar ? 0 : "-5rem"};
+      width: ${props => props.bar ? "15rem" : "5rem"};
+    }
+`
+const MenuBg = styled.div`
+  position: fixed;
+  right: 1rem;
+  z-index: 10000;
+  @media(max-width : 970px){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    top: 0;
+    background : linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  }
+`
+const Bars = styled.div`
+    width: ${props => props.bar ? "15rem" : "5rem"};
+    transition: all 500ms ease-in-out;
+    height: 5rem;
+    background : linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+    `
+const Bar = styled.div`
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+`
+const Line = styled.div`
+    width: 20px;
+    height: 3.5px;
+    background-color: ${props => props.bar ? "transparent" : "#8c8c8e"};
+    border-radius: 50px;
+    transition: all 500ms ease-in-out;
+    :before,:after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 3px;            
+        background-color: #8c8c8e;
+        border-radius: 50px;
+        transition: all 400ms ease-in-out;
+    }
+    :before{
+        transform: ${props => props.bar ? "rotate(45deg)" :  "translateY(7px)"};
+    }
+    :after{
+        transform: ${props => props.bar ? "rotate(-45deg)" : "translateY(-7px)"};
+    }
+`
+const Dots = styled.div`
+    cursor: pointer;
+    display: none;
+    @media(max-width : 970px){
+      display: inline;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      transition: all 500ms ease-in-out;
+      transform: ${props => props.prof ? "translateX(13rem)" : null};
+    }
 `

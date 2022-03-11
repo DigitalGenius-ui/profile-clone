@@ -16,6 +16,15 @@ const Logos = () => {
         slidesToScroll: 3,
         arrows : false,
         autoplay : true,
+        responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+              }
+            },
+        ]
       };
   return (
     <Contents>
@@ -41,6 +50,9 @@ const Contents = styled.div`
         :hover{
             opacity: 1;
         }
+    }
+    @media(max-width : 970px){
+        margin-bottom: 2rem;
     }
     .slick-track{
         text-align: center;

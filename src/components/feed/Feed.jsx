@@ -23,4 +23,7 @@ export default Feed;
 const Container = styled.div`
   position: relative;
   padding : 2rem 2rem 0 2rem ;
+  @media(max-width : 570px){
+    padding : 2rem 1rem 0 1rem ;
+  }
 `

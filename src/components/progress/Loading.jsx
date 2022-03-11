@@ -9,7 +9,7 @@ function LinearProgressWithLabel(props) {
   return (
     <Container>
       <h1 style={{fontSize : "1.3rem"}}>Milad Amiri</h1>
-      <Box width="20rem" mr={1}>
+      <Box width="15rem" mr={1}>
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box minWidth={35}>
@@ -38,7 +38,7 @@ export default function Loading() {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-    }, 400);
+    }, 200);
     return () => {
       clearInterval(timer);
     };

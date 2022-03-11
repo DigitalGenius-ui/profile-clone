@@ -1,23 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Menu = ({bar, setBar}) => {
+    const navigate = useNavigate();
+    const home = () => {
+        setBar(false);
+        navigate("/")
+    }
+    const profile = () => {
+        setBar(false);
+        navigate("/profile")
+    }
+    const contact = () => {
+        setBar(false);
+        navigate("/contact")
+    }
   return (
     <Container>
-        <Bars bar={bar}>
-            <Bar onClick={() => setBar(!bar)}>
-                <Line bar={bar} ></Line>
-            </Bar>
-        </Bars>
+        <Bg bar={bar}></Bg>
         <MenuBar bar={bar}>
-            <div>
-                <Link to="/"><h4>Home</h4></Link>
+            <div onClick={home}>
+                <h4>Home</h4>
             </div>
-            <div>
-                <Link to="profile"><h4>Portfolio</h4></Link>
+            <div onClick={profile}>
+                <h4>Portfolio</h4>
             </div>
-            <div><h4>Contact</h4></div>
+            <div onClick={contact}>
+                <h4>Contact</h4>
+            </div>
         </MenuBar>
     </Container>
   )
@@ -26,49 +37,24 @@ const Menu = ({bar, setBar}) => {
 export default Menu;
 
 const Container = styled.div`
+        position: relative;
     a{
         text-decoration: none;
     }
 `
-const Bars = styled.div`
-    width: ${props => props.bar ? "15rem" : "5rem"};
-    transition: all 500ms ease-in-out;
-    height: 5rem;
-    background : linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
-    `
-const Bar = styled.div`
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-`
-const Line = styled.div`
-    width: 20px;
-    height: 3.5px;
-    background-color: ${props => props.bar ? "transparent" : "#8c8c8e"};
-    border-radius: 50px;
-    transition: all 500ms ease-in-out;
-    :before,:after{
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 3px;            
-        background-color: #8c8c8e;
-        border-radius: 50px;
-        transition: all 400ms ease-in-out;
-    }
-    :before{
-        transform: ${props => props.bar ? "rotate(45deg)" :  "translateY(7px)"};
-    }
-    :after{
-        transform: ${props => props.bar ? "rotate(-45deg)" : "translateY(-7px)"};
-    }
+const Bg = styled.div`
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: #1919237a;
+    animation: animate 500ms ease-in-out;
+    display: ${props => props.bar ? "block" : "none"};
+    z-index: -1;
 `
 const MenuBar = styled.div`
-    padding: 4rem 2rem;
+    padding: 8rem 2rem;
     div{
         h4{
         font-weight: 400;

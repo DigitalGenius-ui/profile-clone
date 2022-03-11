@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { projects } from '../Data/Data';
+import { projects } from '../../Data/Data';
 import { motion } from 'framer-motion';
 import Products from './Products';
-import Animation from '../components/animation/Animation';
+import Animation from '../../components/animation/Animation';
 
 const names = ['all', ...new Set(projects.map((item) => item.category))];
 const Portfolio = () => {
@@ -20,12 +20,12 @@ const Portfolio = () => {
   }
   return (
     <Container>
+      <Animation transition={1} delay={0.6}>
       <Buttons >
         {categories.map((item, i) => (
-          <div className='filter' key={i} onClick={() => filterItem(item)}>{item}</div>
+          <Filter key={i} onClick={() => filterItem(item)}>{item}</Filter>
         ))}
       </Buttons>
-        <Animation transition={0.5} delay={0}>
           <Contents>
             <motion.div layout className='contents'>
               {items.map((item) => (
@@ -33,7 +33,7 @@ const Portfolio = () => {
               ))}
             </motion.div>
           </Contents>
-        </Animation>
+      </Animation>
     </Container>
   )
 }
@@ -42,13 +42,17 @@ export default Portfolio;
 
 const Container = styled.div`
   padding: 1rem 2rem 1rem 2rem;
+  @media(max-width : 970px){
+        padding: 1rem;
+    }
 `
 const Buttons = styled.div`
     display: flex;
     gap: 1rem;
     padding: 1rem 0;
-  .filter{
-    text-transform: uppercase;
+`
+const Filter = styled.div`
+  text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 1px;
     cursor: pointer;
@@ -57,7 +61,6 @@ const Buttons = styled.div`
     :hover{
       color: white;
     }
-  }
 `
 const Contents = styled.div`
   .contents{

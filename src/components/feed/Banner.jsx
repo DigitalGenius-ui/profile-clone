@@ -9,8 +9,8 @@ const Feed = () => {
         <Animation transition ={0.5} delay= {0.5}>
           <Banner>
             <Texts>
-              <h1>Discover my Amazing <br></br> Art Space!</h1>
-              <div style={{display : "flex", alignItems : "center", fontSize : "1rem", gap : "0.2rem"}}> 
+              <h1>Discover my Amazing Art Space!</h1>
+              <div> 
                 &lt;<span className='code'>code</span>&gt; I built
                 <Typewriter
                   options={{
@@ -47,14 +47,53 @@ const Banner = styled.div`
 `
 const Texts = styled.div`
   padding: 3rem;
+  @media(max-width : 970px){
+    text-align: center;
+  }
+  @media(max-width : 640px){
+      padding: 3rem 2rem;
+    }
   h1{
     font-size: 3rem;
+    width: 29rem;
     font-family: 'Passion One', cursive;
     letter-spacing: 0.1rem;
     font-weight: 500;
+    @media(max-width : 1150px){
+      font-size: 2.5rem;
+    }
+    @media(max-width : 970px){
+      width: 28rem;
+      margin: 0 auto;
+      font-size: 3rem;
+    }
+    @media(max-width : 640px){
+      width: 100%;
+      font-size: 3rem;
+    }
+    @media(max-width : 570px){
+      font-size: 2.5rem;
+    }
   }
   div{
-    padding: 1rem 0;
+    padding: 0.4rem 0;
+    display : flex;
+    align-items : center;
+    font-size : 1rem;
+    gap : 0.2rem;
+    @media(max-width : 1110px){
+      font-size: 0.9rem;
+    }
+    @media(max-width : 970px){
+      justify-content: center;
+      font-size: 1rem;
+    }
+    @media(max-width : 570px){
+      font-size: 0.8rem;
+    }
+    @media(max-width : 375px){
+      font-size: 0.6rem;
+    }
     .code{
       color: skyblue;
       font-weight: 500;
@@ -69,6 +108,12 @@ const Texts = styled.div`
     text-transform: uppercase;
     cursor: pointer;
     transition: all 500ms ease-in-out;
+    @media(max-width : 970px){
+      margin-top: 1rem;
+    }
+    @media(max-width : 640px){
+      padding: 0.7rem 1.5rem;
+    }
     :hover{
       transform: translateY(-3px);
     }
@@ -79,4 +124,10 @@ const Image = styled.img`
   position: absolute;
   bottom: 0;
   right: 3rem;
+  @media(max-width : 1088px){
+    right: 1rem;
+  }
+  @media(max-width : 1050px){
+    display: none;
+  }
 `

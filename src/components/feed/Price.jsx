@@ -81,7 +81,7 @@ const Carts = styled.div`
 const Cart = styled.div`
     background: linear-gradient(159deg, 
     #2d2d3a 0%, #2b2b35 100%);
-    padding: 1rem;
+    padding: 2rem ;
 `
 const Head = styled.div`
     text-align: center;

@@ -1,13 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const Profile = () => {
   return (
     <Container>
-        <Dots>
-            <MoreVertIcon />
-        </Dots>
         <Image src="https://res.cloudinary.com/ghazni/image/upload/v1646637426/m_jvhkfn.jpg"/>
         <Text>
             <h1>Milad Amiri</h1>
@@ -26,7 +22,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: relative;
 `
 
@@ -46,10 +42,10 @@ const Text = styled.div`
         color: #8c8c8e;
     }
 `
-const Dots = styled.div`
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    display: none;
-`
+// const Dots = styled.div`
+//     position: absolute;
+//     top: 1rem;
+//     right: 1rem;
+//     cursor: pointer;
+//     display: none;
+// `
