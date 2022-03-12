@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ProfileState } from '../../context/Context';
 
 const Menu = () => {
-    const {bar, setBar, prof} = ProfileState();
+    const {bar, setBar, prof, seProf} = ProfileState();
     const navigate = useNavigate();
     const home = () => {
         setBar(false);
@@ -18,9 +18,13 @@ const Menu = () => {
         setBar(false);
         navigate("/contact")
     }
+    const deleteAll = () => {
+      setBar(false)
+      setProf(false);
+    }
   return (
     <Container>
-        <Bg bar={bar} prof={prof}></Bg>
+        <Bg bar={bar} prof={prof} onClick={deleteAll}></Bg>
         <MenuBar bar={bar}>
             <div onClick={home}>
                 <h4>Home</h4>
