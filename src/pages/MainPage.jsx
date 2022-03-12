@@ -96,7 +96,7 @@ const Skill = styled.div`
     }
 `
 const FeedBar = styled.div`
-    overflow: scroll;
+    overflow-y: scroll;
     position: fixed;
     top : 1rem;
     right: 6rem;

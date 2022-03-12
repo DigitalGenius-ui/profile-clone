@@ -3,19 +3,21 @@ import styled from 'styled-components';
 import { service } from '../../Data/Data';
 import {IoIosArrowForward} from 'react-icons/io';
 import Animation from '../animation/Animation';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+    const navigate = useNavigate();
   return (
       <Container>
         <Animation transition={1.3} delay={0.5}>
             <h2>My Services</h2>
             <Service>
                 {service.map((item,i) => (
-                        <Box key={i}>
-                            <h1>{item.title}</h1>
-                            <p>{item.body}</p>
-                            <div>order now <IoIosArrowForward className='icon'/></div>
-                        </Box>
+                    <Box key={i}>
+                        <h1>{item.title}</h1>
+                        <p>{item.body}</p>
+                        <div onClick={() => navigate("/contact")}>order now <IoIosArrowForward className='icon'/></div>
+                    </Box>
                 ))}
             </Service>
         </Animation>

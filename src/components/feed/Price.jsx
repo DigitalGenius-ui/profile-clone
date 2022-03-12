@@ -4,8 +4,10 @@ import {TiTick} from 'react-icons/ti';
 import {IoIosArrowForward} from 'react-icons/io';
 import CloseIcon from '@material-ui/icons/Close';
 import Animation from '../animation/Animation';
+import { useNavigate } from 'react-router-dom';
 
 const Price = () => {
+    const navigate = useNavigate();
   return (
     <Container>
         <h2>Price Plans</h2>
@@ -25,7 +27,7 @@ const Price = () => {
                         <h1><TiTick style={{color : "skyblue"}} />6 Months Free Service</h1>
                     </Body>
                     <Foot>
-                    <div>order now <IoIosArrowForward className='icon'/></div>
+                    <div onClick={() => navigate("/contact")}>order now <IoIosArrowForward className='icon'/></div>
                     </Foot>
                 </Cart>
             </Animation>
@@ -44,7 +46,7 @@ const Price = () => {
                         <h1><TiTick style={{color : "skyblue"}} />1 Year Free Service</h1>
                     </Body>
                     <Foot>
-                    <div>order now <IoIosArrowForward className='icon'/></div>
+                    <div onClick={() => navigate("/contact")}>order now <IoIosArrowForward className='icon'/></div>
                     </Foot>
                 </Cart>
             </Animation>
@@ -63,7 +65,7 @@ const Price = () => {
                         <h1><TiTick style={{color : "skyblue"}} />1 Year Free Service</h1>
                     </Body>
                     <Foot>
-                    <div>order now <IoIosArrowForward className='icon'/></div>
+                    <div onClick={() => navigate("/contact")}>order now <IoIosArrowForward className='icon'/></div>
                     </Foot>
                 </Cart>
             </Animation>
@@ -134,6 +136,7 @@ const Foot  = styled.div`
         color: skyblue;
         cursor: pointer;
         letter-spacing: 0.9px;
+        width: 6rem;
         .icon{
             transition: all 400ms ease-in-out;
         }

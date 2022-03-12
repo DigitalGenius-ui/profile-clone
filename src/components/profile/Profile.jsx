@@ -22,7 +22,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.6rem 0;
     position: relative;
 `
 
@@ -33,12 +33,12 @@ const Image = styled.img`
 const Text = styled.div`
     h1{
         font-size: 1.1rem;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
     }
     p{
         font-size: 0.8rem;
         font-weight: 300;
-        padding-top: 0.2rem;
+        padding-top: 0.5rem;
         color: #8c8c8e;
     }
 `

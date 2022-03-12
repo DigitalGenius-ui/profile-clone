@@ -12,15 +12,15 @@ const Contact = () => {
             <h2>Get in touch</h2>
             <form>
                 <Input>
-                    <div><FaUserAlt style={{fontSize:"0.7rem"}}/></div>
+                    <div><FaUserAlt style={{fontSize:"0.7rem", opacity : "0.6"}}/></div>
                     <input type="text" placeholder='Name'/>
                 </Input>
                 <Input>
-                    <div><MdAlternateEmail style={{fontSize:"0.7rem"}}/></div>
+                    <div><MdAlternateEmail style={{fontSize:"0.7rem", opacity : "0.6"}}/></div>
                     <input type="text" placeholder='Email'/>
                 </Input>
                 <TextArea>
-                    <div><HiOutlineMail style={{fontSize:"0.7rem"}}/></div>
+                    <div><HiOutlineMail style={{fontSize:"0.7rem", opacity : "0.6"}}/></div>
                     <textarea type="text" placeholder='Message' rows="7"/>
                 </TextArea>
                 <button>send message</button>

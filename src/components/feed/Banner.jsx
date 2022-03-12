@@ -1,12 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Typewriter from 'typewriter-effect'
 import Animation from '../animation/Animation';
 
 const Feed = () => {
+  const navigate = useNavigate();
   return (
     <Container>
-        <Animation transition ={0.5} delay= {0.5}>
+        <Animation transition ={1} delay= {0.5}>
           <Banner>
             <Texts>
               <h1>Discover my Amazing Art Space!</h1>
@@ -22,7 +24,7 @@ const Feed = () => {
                 />
                 &lt;<span className='code'>code</span>&gt;
               </div>
-              <button>explore now</button>
+              <button onClick={() => navigate("/contact")}>explore now</button>
             </Texts>
             <Image style={{opacity : "0.8"}} src="https://res.cloudinary.com/ghazni/image/upload/v1646637435/milad_z34z7s.png"/>
           </Banner>
