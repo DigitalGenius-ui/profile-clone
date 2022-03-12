@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Feed from '../components/feed/Feed';
@@ -10,11 +10,10 @@ import Skills from '../components/profile/Skills';
 import Contact from './contact/Contact';
 import Portfolio from './products/Portfolio';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { ProfileState } from '../context/Context';
 
 const MainPage = () => {
-    const [bar, setBar] = useState(false);
-    const [prof, setProf] = useState(false);
-
+    const {bar, setBar, prof ,setProf} = ProfileState();
     const profileMove = () => {
       setProf(!prof);
       setBar(false)
@@ -29,7 +28,7 @@ const MainPage = () => {
             <Dots prof={prof}>
               <MoreVertIcon 
               onClick={profileMove}
-              style={{background : "linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%)"}}/>
+              style={{opacity : "0.6"}}/>
             </Dots>
             <Bars bar={bar}>
               <Bar onClick={barMove}>
@@ -76,10 +75,13 @@ const ProfileBar = styled.div`
     top: 1rem;
     background-color: #20202a;
     overflow: hidden;
+    z-index: 100;
     @media(max-width : 970px){
-      transform: ${props => props.prof ? "translateX(-1rem)" : "translateX(-20rem)"};
+      transform: ${props => props.prof ? "translateX(-1rem)" : "translateX(-21rem)"};
       transition: all 500ms ease-in-out;
-      margin-top: 3rem;
+      bottom: 1rem;
+      top: 5rem;
+      width: 20rem;
     }
 `
 const Skill = styled.div`

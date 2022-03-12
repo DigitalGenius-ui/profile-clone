@@ -1,8 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { ProfileState } from '../../context/Context';
 
-const Menu = ({bar, setBar}) => {
+const Menu = () => {
+    const {bar, setBar, prof} = ProfileState();
     const navigate = useNavigate();
     const home = () => {
         setBar(false);
@@ -18,7 +20,7 @@ const Menu = ({bar, setBar}) => {
     }
   return (
     <Container>
-        <Bg bar={bar}></Bg>
+        <Bg bar={bar} prof={prof}></Bg>
         <MenuBar bar={bar}>
             <div onClick={home}>
                 <h4>Home</h4>
@@ -50,7 +52,7 @@ const Bg = styled.div`
     bottom: 1rem;
     background-color: #1919237a;
     animation: animate 500ms ease-in-out;
-    display: ${props => props.bar ? "block" : "none"};
+    display: ${props => props.bar || props.prof ? "block" : "none"};
     z-index: -1;
 `
 const MenuBar = styled.div`

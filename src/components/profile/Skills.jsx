@@ -57,15 +57,13 @@ const Skills = () => {
               ))}
           </Deploy>
           <Social>
-              <FaLinkedinIn className='icon'/>
-              <BsInstagram className='icon'/>
-              <AiFillGithub  className='icon'
-              style={{fontSize : '1rem'}}
-              />
-              <AiOutlineMedium  className='icon'
-              style={{fontSize : '1rem'}}
-              />
-              <FaFacebookF className='icon'/>
+              <a href="https://www.linkedin.com/in/milad-amiri-215894207/" target="_blank" rel="noreferrer"><FaLinkedinIn className='icon'/></a>
+              <a href="https://www.instagram.com/milad_amiri01/" target="_blank" rel="noreferrer"><BsInstagram className='icon'/></a>
+              <a href="https://github.com/DigitalGenius-ui" target="_blank" rel="noreferrer"><AiFillGithub  className='icon'
+              style={{fontSize : '1rem'}}/></a>
+              <a href="https://digitalgenius1.medium.com/" target="_blank" rel="noreferrer"><AiOutlineMedium  className='icon'
+              style={{fontSize : '1rem'}}/></a>
+              <a href="https://www.facebook.com/profile.php?id=100009019544917" target="_blank" rel="noreferrer"><FaFacebookF className='icon'/></a>
           </Social>
       </Container>
   )

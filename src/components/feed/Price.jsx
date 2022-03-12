@@ -3,63 +3,70 @@ import styled from 'styled-components';
 import {TiTick} from 'react-icons/ti';
 import {IoIosArrowForward} from 'react-icons/io';
 import CloseIcon from '@material-ui/icons/Close';
+import Animation from '../animation/Animation';
 
 const Price = () => {
   return (
     <Container>
         <h2>Price Plans</h2>
         <Carts>
-            <Cart>
-                <Head>
-                    <h1>basic</h1>
-                    <h2><span>$</span>50</h2>
-                </Head>
-                <Body>
+            <Animation transition={1} delay={0.6}>
+                <Cart>
+                    <Head>
+                        <h1>basic</h1>
+                        <h2><span>$</span>50</h2>
+                    </Head>
+                    <Body>
+                        <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>Personal Portfolio</h1>
+                        <h1 className='not'><CloseIcon className='icon'/>E-Commerce Website</h1>
+                        <h1 className='not'><CloseIcon className='icon'/>SEO Analyses</h1>
+                        <h1 className='not'><CloseIcon className='icon'/>UX/UI Convert</h1>
+                        <h1><TiTick style={{color : "skyblue"}} />6 Months Free Service</h1>
+                    </Body>
+                    <Foot>
+                    <div>order now <IoIosArrowForward className='icon'/></div>
+                    </Foot>
+                </Cart>
+            </Animation>
+            <Animation transition={1} delay={0.7}>
+                <Cart>
+                    <Head>
+                        <h1>Standard</h1>
+                        <h2><span>$</span>75</h2>
+                    </Head>
+                    <Body>
+                        <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>Personal Portfolio</h1>
+                        <h1 className='not'><CloseIcon className='icon'/>E-Commerce Website</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>SEO Analyses</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>UX/UI Convert</h1>
+                        <h1><TiTick style={{color : "skyblue"}} />1 Year Free Service</h1>
+                    </Body>
+                    <Foot>
+                    <div>order now <IoIosArrowForward className='icon'/></div>
+                    </Foot>
+                </Cart>
+            </Animation>
+            <Animation transition={1} delay={0.8}>
+                <Cart>
+                    <Head>
+                        <h1>Premium</h1>
+                        <h2><span>$</span>100</h2>
+                    </Head>
+                    <Body>
                     <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>Personal Portfolio</h1>
-                    <h1 className='not'><CloseIcon className='icon'/>E-Commerce Website</h1>
-                    <h1 className='not'><CloseIcon className='icon'/>SEO Analyses</h1>
-                    <h1 className='not'><CloseIcon className='icon'/>UX/UI Convert</h1>
-                    <h1><TiTick style={{color : "skyblue"}} />6 Months Free Service</h1>
-                </Body>
-                <Foot>
-                <div>order now <IoIosArrowForward className='icon'/></div>
-                </Foot>
-            </Cart>
-            <Cart>
-                <Head>
-                    <h1>Standard</h1>
-                    <h2><span>$</span>75</h2>
-                </Head>
-                <Body>
-                    <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>Personal Portfolio</h1>
-                    <h1 className='not'><CloseIcon className='icon'/>E-Commerce Website</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>SEO Analyses</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>UX/UI Convert</h1>
-                    <h1><TiTick style={{color : "skyblue"}} />1 Year Free Service</h1>
-                </Body>
-                <Foot>
-                <div>order now <IoIosArrowForward className='icon'/></div>
-                </Foot>
-            </Cart>
-            <Cart>
-                <Head>
-                    <h1>Premium</h1>
-                    <h2><span>$</span>100</h2>
-                </Head>
-                <Body>
-                <h1><TiTick style={{color : "skyblue"}}/>Landing Page</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>Personal Portfolio</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>E-Commerce Website</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>SEO Analyses</h1>
-                    <h1><TiTick style={{color : "skyblue"}}/>UX/UI Convert</h1>
-                    <h1><TiTick style={{color : "skyblue"}} />1 Year Free Service</h1>
-                </Body>
-                <Foot>
-                <div>order now <IoIosArrowForward className='icon'/></div>
-                </Foot>
-            </Cart>
+                        <h1><TiTick style={{color : "skyblue"}}/>Personal Portfolio</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>E-Commerce Website</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>SEO Analyses</h1>
+                        <h1><TiTick style={{color : "skyblue"}}/>UX/UI Convert</h1>
+                        <h1><TiTick style={{color : "skyblue"}} />1 Year Free Service</h1>
+                    </Body>
+                    <Foot>
+                    <div>order now <IoIosArrowForward className='icon'/></div>
+                    </Foot>
+                </Cart>
+            </Animation>
         </Carts>
     </Container>
   )

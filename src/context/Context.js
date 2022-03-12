@@ -1,16 +1,16 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 const Profile = createContext(); 
 
 const Context = (props) => {
-    const [checked, setChecked] = useState(false);
-
-  useEffect(() => {
-    setChecked((prev) => !prev);
-  },[]);
+    const [bar, setBar] = useState(false);
+    const [prof, setProf] = useState(false);
   return (
     <Profile.Provider value={{
-        checked : checked
+      prof,
+      setProf,
+      bar,
+      setBar,
     }}>
         {props.children}
     </Profile.Provider>
