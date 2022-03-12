@@ -19,7 +19,7 @@ const Menu = () => {
         navigate("/contact")
     }
     const deleteAll = () => {
-      setBar(false)
+      setBar(false);
       setProf(false);
     }
   return (
