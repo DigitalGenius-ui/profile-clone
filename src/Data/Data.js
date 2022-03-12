@@ -40,11 +40,11 @@ export const service = [
 export const projects = [
     {
       id:1,
-      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959292/manage_e75lqk.png',
-      category:'basic',
-      disc : "This static landing page is build using HTML5, CSS3, AOS animation and Vanilla Javascript.",
-      text:'Manage Landing Page ',
-      html_link:'https://digitalgenius-ui.github.io/manage-landing-page/',
+      image:"https://res.cloudinary.com/ghazni/image/upload/v1647055517/Screenshot_1_ma23qi.png",
+      category:'complex',
+      text:'Droner Landing Page',
+      html_link:'https://milad-drone.netlify.app/',
+      disc : "This Droner Landing Page is build using REACT JS components, Material-ui, Restful Api, React Slick, Firebase, Redux/Toolkit, Rtk Query",
     },
     {
       id:2,
@@ -56,11 +56,11 @@ export const projects = [
     },
     {
       id:3,
-      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959296/onta_th5ipe.png',
-      category:'basic',
-      text:'law Landing Page',
-      html_link:'https://digitalgenius-ui.github.io/law-client/',
-      disc : "This dynamic landing page is build using REACT JS components, Styled-Components and React-Reaveal animation.",
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959294/linkedin_ccu16j.png',
+      category:'complex',
+      text:'Linkedin Clone',
+      html_link:'https://milad-linkedin-clone.netlify.app/',
+      disc : "This dynamic Linkedin app is build using REACT JS components, Styled-Components, Material-ui, firebase, and Context Api.",
     },
     {
       id:4,
@@ -72,11 +72,11 @@ export const projects = [
     },
     {
       id:5,
-      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959294/linkedin_ccu16j.png',
-      category:'complex',
-      text:'Linkedin Clone',
-      html_link:'https://milad-linkedin-clone.netlify.app/',
-      disc : "This dynamic Linkedin app is build using REACT JS components, Styled-Components, Material-ui, firebase, and Context Api.",
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959296/onta_th5ipe.png',
+      category:'basic',
+      text:'law Landing Page',
+      html_link:'https://digitalgenius-ui.github.io/law-client/',
+      disc : "This dynamic landing page is build using REACT JS components, Styled-Components and React-Reaveal animation.",
     },
     {
       id:6,
@@ -85,5 +85,13 @@ export const projects = [
       text:'Corona Virus Tracker',
       html_link:'https://milad-corona-tracker.netlify.app/',
       disc : "This Corona Virus Tracker is build using REACT JS components, Material-ui, Restful Api",
-    }
+    },
+    {
+      id:7,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959292/manage_e75lqk.png',
+      category:'basic',
+      disc : "This static landing page is build using HTML5, CSS3, AOS animation and Vanilla Javascript.",
+      text:'Manage Landing Page ',
+      html_link:'https://digitalgenius-ui.github.io/manage-landing-page/',
+    },
   ]
