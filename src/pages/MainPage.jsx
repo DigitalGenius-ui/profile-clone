@@ -21,7 +21,7 @@ const MainPage = () => {
     }
     const barMove = () => {
       setBar(!bar)
-      setProf(!false);
+      setProf(false);
     }
   return (
     <BrowserRouter >

@@ -142,6 +142,9 @@ const Social = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media(max-width : 970px){
+    bottom : 0;
+    }
     .icon{
         cursor: pointer;
         color:#8b96a1;
