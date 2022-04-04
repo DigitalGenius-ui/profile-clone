@@ -94,4 +94,12 @@ export const projects = [
       text:'Manage Landing Page ',
       html_link:'https://digitalgenius-ui.github.io/manage-landing-page/',
     },
+    {
+      id:8,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1649084769/Screenshot_4_jrfu20.png',
+      category:'complex',
+      disc : "This static NFT landing page is build using Next js, Swiper Slider, Figma, react-reveal,",
+      text:'Manage Landing Page ',
+      html_link:'https://nft-clone-flame.vercel.app/',
+    },
   ]
