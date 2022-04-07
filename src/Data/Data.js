@@ -97,9 +97,17 @@ export const projects = [
     {
       id:8,
       image:'https://res.cloudinary.com/ghazni/image/upload/v1649084769/Screenshot_4_jrfu20.png',
-      category:'complex',
-      disc : "This static NFT landing page is build using Next js, Swiper Slider, Figma, react-reveal,",
-      text:'Manage Landing Page ',
+      category:'basic',
+      disc : "This static NFT landing page is build using Next js, Swiper Slider, Figma, react-reveal,styled-components.",
+      text:'GBaby NFT’s Landing Page ',
       html_link:'https://nft-clone-flame.vercel.app/',
+    },
+    {
+      id:9,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1649326807/Screenshot_7_qgydh9.png',
+      category:'complex',
+      disc : "Star movies App is build using Next js, TMDB api, styled-components. User can search for movies and see its details.",
+      text:'Star movies App',
+      html_link:'https://star-films-amvlz4m0r-milad-amiri.vercel.app/',
     },
   ]
