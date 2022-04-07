@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ProfileState } from '../../context/Context';
 
 const Menu = () => {
-    const {bar, setBar, prof, seProf} = ProfileState();
+    const {bar, setBar, prof} = ProfileState();
     const navigate = useNavigate();
     const home = () => {
         setBar(false);
