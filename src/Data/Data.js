@@ -108,6 +108,6 @@ export const projects = [
       category:'complex',
       disc : "Star movies App is build using Next js, TMDB api, styled-components. User can search for movies and see its details.",
       text:'Star movies App',
-      html_link:'https://star-films-amvlz4m0r-milad-amiri.vercel.app/',
+      html_link:'https://star-films.vercel.app/',
     },
   ]
