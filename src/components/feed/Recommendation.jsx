@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Recommendation = () => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1
@@ -64,7 +64,7 @@ const Recommendation = () => {
 export default Recommendation;
 
 const Container = styled.div`
-      width: 100%;
+    width: 100%;
     h2{
         font-size : 1rem;
         padding : 1.5rem 0 ;
@@ -102,7 +102,7 @@ const Container = styled.div`
   }
 `
 const Slide = styled.div`
-  margin: 1rem;
+  margin: 1rem 0;
   background: linear-gradient(159deg, 
     #2d2d3a 0%, #2b2b35 100%);
   padding: 2rem;

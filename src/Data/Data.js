@@ -56,11 +56,11 @@ export const projects = [
     },
     {
       id:3,
-      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959294/linkedin_ccu16j.png',
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1658503386/milad-webpack-weather.netlify.app__si0obc.png',
       category:'complex',
-      text:'Linkedin Clone',
-      html_link:'https://milad-linkedin-clone.netlify.app/',
-      disc : "This dynamic Linkedin app is build using REACT JS components, Styled-Components, Material-ui, firebase, and Context Api.",
+      text:'Weather App',
+      html_link:'https://milad-webpack-weather.netlify.app/',
+      disc : "This Weather App is developed using Webpack bundler, Open Weather API, and Sass. ",
     },
     {
       id:4,
@@ -96,6 +96,14 @@ export const projects = [
     },
     {
       id:8,
+      image:'https://res.cloudinary.com/ghazni/image/upload/v1645959294/linkedin_ccu16j.png',
+      category:'complex',
+      text:'Linkedin Clone',
+      html_link:'https://milad-linkedin-clone.netlify.app/',
+      disc : "This dynamic Linkedin app is build using REACT JS components, Styled-Components, Material-ui, firebase, and Context Api.",
+    },
+    {
+      id:9,
       image:'https://res.cloudinary.com/ghazni/image/upload/v1649084769/Screenshot_4_jrfu20.png',
       category:'basic',
       disc : "This static NFT landing page is build using Next js, Swiper Slider, Figma, react-reveal,styled-components.",
@@ -103,11 +111,11 @@ export const projects = [
       html_link:'https://nft-clone-flame.vercel.app/',
     },
     {
-      id:9,
+      id:10,
       image:'https://res.cloudinary.com/ghazni/image/upload/v1649326807/Screenshot_7_qgydh9.png',
       category:'complex',
       disc : "Star movies App is build using Next js, TMDB api, styled-components. User can search for movies and see its details.",
       text:'Star movies App',
-      html_link:'https://star-films.vercel.app/',
+      html_link:'https://star-films-amvlz4m0r-milad-amiri.vercel.app/',
     },
   ]

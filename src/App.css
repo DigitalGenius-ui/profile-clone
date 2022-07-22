@@ -32,3 +32,8 @@ body{
     opacity: 1;
   }
 }
+
+/* scrollbar style  */
+::-webkit-scrollbar {
+  display: none;
+}

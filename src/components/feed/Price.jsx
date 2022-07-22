@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {TiTick} from 'react-icons/ti';
 import {IoIosArrowForward} from 'react-icons/io';
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@mui/icons-material/Close';
 import Animation from '../animation/Animation';
 import { useNavigate } from 'react-router-dom';
 

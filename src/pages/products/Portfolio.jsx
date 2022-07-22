@@ -23,7 +23,9 @@ const Portfolio = () => {
       <Animation transition={1} delay={0.6}>
       <Buttons >
         {categories.map((item, i) => (
-          <Filter key={i} onClick={() => filterItem(item)}>{item}</Filter>
+          <Filter key={i} onClick={() => filterItem(item)}>
+            {item}
+          </Filter>
         ))}
       </Buttons>
           <Contents>

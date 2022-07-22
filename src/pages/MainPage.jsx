@@ -9,7 +9,7 @@ import Profile from '../components/profile/Profile';
 import Skills from '../components/profile/Skills';
 import Contact from './contact/Contact';
 import Portfolio from './products/Portfolio';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { ProfileState } from '../context/Context';
 
 const MainPage = () => {
@@ -91,9 +91,6 @@ const Skill = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    ::-webkit-scrollbar {
-        display: none;
-    }
 `
 const FeedBar = styled.div`
     overflow-y: scroll;
@@ -108,9 +105,6 @@ const FeedBar = styled.div`
       right: 0;
       left: 0;
       top : 4rem;
-    }
-    ::-webkit-scrollbar{
-        display: none;
     }
 `
 const BgImg = styled.div`
