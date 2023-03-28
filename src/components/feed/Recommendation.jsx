@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from 'react-slick/lib/slider';
+import Slider from 'react-slick';
 import styled from 'styled-components';
 
 const Recommendation = () => {
@@ -7,27 +7,13 @@ const Recommendation = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1
   };
   return (
     <Container>
         <h2>Recommendations</h2>
         <Slider {...settings}>
-          <Slide>
-            <Head>
-              <Image src="https://res.cloudinary.com/ghazni/image/upload/v1646637426/m_jvhkfn.jpg"/>
-              <Text>
-                <h1>Milad Amiri</h1>
-                <p>Web Developer</p>
-              </Text>
-            </Head>
-            <Body>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit officiis eum facilis 
-                assumenda? Aliquid obcaecati, nemo dolorem veniam perferendis, 
-                incidunt atque magni velit soluta numquam eligendi facere iure accusantium maxime eos laboriosam corrupti optio fuga expedita est sunt neque voluptatum.</p>
-            </Body>
-          </Slide>
           <Slide>
             <Head>
               <Image src="https://res.cloudinary.com/ghazni/image/upload/v1646637426/m_jvhkfn.jpg"/>

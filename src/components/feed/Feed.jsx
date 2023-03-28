@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import About from './About';
 import Banner from './Banner';
 import Price from './Price';
-// import Recommendation from './Recommendation';
+import Recommendation from './Recommendation';
 import Services from './Services';
 
 const Feed = () => {
@@ -13,7 +13,7 @@ const Feed = () => {
       <About/>
       <Services/>
       <Price/>
-      {/* <Recommendation/> */}
+      <Recommendation/>
     </Container>
   )
 }
